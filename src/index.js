@@ -80,15 +80,12 @@ class ReactScrollUpIndicator extends React.Component {
         const { className, activeClassName } = this.props;
         const { active } = this.state;
         const itemClass = `${className} ${active ? activeClassName : ''}`;
-        return (
-            <div className={itemClass} onClick={this.scrollUp.bind(this)}>
-                {this.props.children}
-            </div>
-        );
+        return React.createElement(this.props.tagName, { className: itemClass, onClick: this.scrollUp.bind(this) }, this.props.children);
     }
 }
 
 ReactScrollUpIndicator.defaultProps = {
+    tagName: 'div',
     distance: 20,
     hideAlways: 500,
     className: 'indicator',
@@ -96,6 +93,7 @@ ReactScrollUpIndicator.defaultProps = {
 };
 
 ReactScrollUpIndicator.propTypes = {
+    tagName: PropTypes.string.isRequired,
     distance: PropTypes.number.isRequired,
     hideAlways: PropTypes.number.isRequired,
     activeClassName: PropTypes.string.isRequired,
