@@ -1,0 +1,30 @@
+<html>
+    <style type="text/css">
+        body {
+            background-image: repeating-linear-gradient(90deg, #ccc, #ccc 30px, #dbdbdb 30px, #dbdbdb 60px);
+        }
+        .sample {
+            height: 500vh;
+        }
+        .indicator {
+            background: red;
+            color: #FFF;
+            line-height: 50px;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            transition: all 100ms ease-in-out;
+            position: fixed;
+            bottom: 10px;
+            right: -100px;
+        }
+        .indicator--active {
+            right: 20px;
+        }
+
+    </style>
+<body>
+  <div id="app"></div>
+  <script src="./sample.js"></script>
+</body>
+</html>
