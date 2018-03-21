@@ -1,12 +1,11 @@
 {
   "name": "react-scroll-up-indicator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A smooth scroll up indicator",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": "git@github.com:steffenmllr/react-scroll-up-indicator.git",
   "author": "Steffen Müller",
   "license": "MIT",
-  "main": "lib/index.js",
   "scripts": {
     "dev": "parcel example/index.html",
     "build": "rm -fr lib && babel --presets es2015 src/ --out-dir lib/"
